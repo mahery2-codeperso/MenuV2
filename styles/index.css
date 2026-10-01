@@ -1,0 +1,123 @@
+@charset "UTF-8";
+
+/* --- Format Mobile ------------------------------------------------------------------------- Format Mobile --- */
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color : black;
+}
+
+main {
+    flex: 1;
+}
+
+.masque {
+    display: none;
+}
+
+/* Permet la transition */
+@keyframes apparition {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+div.menu:not(.masque) {
+    animation: apparition 0.3s ease-out;
+}
+
+.regroupement {
+    background-color: none;
+}
+
+div {
+    opacity: 90%;
+    display: flex;
+    flex-direction: column;
+    background-color: #7e7c7c;
+    margin: 1rem;
+    padding: 1rem 0;
+    width: auto;
+    border-radius: 1rem;
+    gap : 1rem;
+    text-align: center;
+    width: 125%;
+    transition: all 1s ease;
+    box-shadow: 0 0 10px #474747;
+}
+
+.menu {
+    
+}
+
+button {
+    border: none;
+    border-radius: 1rem;
+    margin:0 10%;
+    padding: 0.75rem;
+    color : rgb(0, 0, 0);
+    cursor: pointer;
+    transition: all 0.235s ease;
+    box-shadow: 0 0 10px #686767;
+}
+
+.menu-menu {
+    padding: 1.5%;
+}
+.menu-menu button{
+    margin: 1.5% 1.5%;
+    transition: all 0.235s ease;
+}
+
+.menu-menu button:hover{
+    margin: 7.5%;
+}
+
+button:hover {
+    padding : 1rem 0.9rem;
+    background-color: #ffffff;
+    box-shadow: 0 0 10px #e2e1e1;
+    transform: scale(1.05);
+}
+
+h1 {
+    font-size: 1rem;
+}
+
+.credit {
+    gap : 0;
+    padding-bottom: 1rem; 
+}
+
+.credit h1 {
+    padding-bottom: 1rem; 
+}
+
+#one {
+    padding-bottom: 0.2rem;
+} 
+
+.title {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    font-size: 1.25rem;
+}
+
+/* --- Format Mobile ------------------------------------------------------------------------- Format Mobile --- */
+
+/* --- Format PC ------------------------------------------------------------------------- Format PC --- */
+
+@media (min-width : 768px) {
+
+
+
+}
