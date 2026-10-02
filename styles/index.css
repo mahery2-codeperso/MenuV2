@@ -7,13 +7,22 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
     color : black;
 }
 
+/* Bonnes pratiques pour la gestion des tailles */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
 main {
     flex: 1;
+    justify-content: center;
+    position: absolute;
+    top : 0%;
 }
 
 .masque {
@@ -44,19 +53,18 @@ div {
     display: flex;
     flex-direction: column;
     background-color: #7e7c7c;
-    margin: 1rem;
     padding: 1rem 0;
-    width: auto;
     border-radius: 1rem;
     gap : 1rem;
     text-align: center;
-    width: 125%;
     transition: all 1s ease;
     box-shadow: 0 0 10px #474747;
+    width: 125%;
+    max-width: 500px;
 }
 
 .menu {
-    
+    text-align: center;
 }
 
 button {
@@ -93,6 +101,61 @@ h1 {
     font-size: 1rem;
 }
 
+.menu-principal {
+    margin: 0.5rem;
+}
+
+.menu-parametre {
+
+}
+
+.menu-parametre button{
+
+}
+
+/* ----- Son ------------------------------------------------- Son ----- */
+
+.menu-son {
+    width: auto;
+    padding: 1rem;
+}
+
+
+.barreson {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    margin: 0;
+    padding: 0.75rem 1rem;
+    background-color: white;
+    border-radius: 1rem;
+    transition: transform 0.235s ease, box-shadow 0.235s ease;
+}
+
+.barreson:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px #e2e1e1;
+}
+.volume {
+    cursor: pointer;
+    margin: 0;
+    padding-right: 0;
+}
+
+
+/* ----- Son ------------------------------------------------- Son ----- */
+
+/* ----- Langue ------------------------------------------------- Langue ----- */
+
+.menu-langue {
+    width: auto;
+}
+
+/* ----- Langue ------------------------------------------------- Langue ----- */
+
 .credit {
     gap : 0;
     padding-bottom: 1rem; 
@@ -101,6 +164,17 @@ h1 {
 .credit h1 {
     padding-bottom: 1rem; 
 }
+
+
+
+
+
+
+
+.label {
+}
+
+
 
 #one {
     padding-bottom: 0.2rem;
@@ -118,6 +192,11 @@ h1 {
 
 @media (min-width : 768px) {
 
+div {
+    margin: 1rem;
+}
 
-
+.menu-principal {
+    margin: 1rem;
+}
 }

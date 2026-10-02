@@ -4,13 +4,17 @@ const boutonPrincipal = document.querySelectorAll(".btn-p");
 const boutonParametre = document.querySelectorAll(".btn-prm");
 const boutonLangue = document.querySelectorAll(".btn-langue");
 const btnr = document.querySelectorAll(".btn-return"); // à l'avenir à mieux configurer ce bouton
+const btnCurseurVolume = document.querySelectorAll(".volume");
+const textVolume = document.querySelectorAll(".volume-valeur");
+
 
 // interface
 const AffbtnMenu = document.querySelector(".menu-menu");
 const MenuPrincipal = document.querySelector(".menu-principal");
 const MenuParametre = document.querySelector(".menu-parametre");
-const credit = document.querySelector(".credit");
+const MenuAudio = document.querySelector(".menu-son");
 const MenuLangue = document.querySelector(".menu-langue");
+const credit = document.querySelector(".credit");
 
 const masque = document.querySelector(".masque");
 const label = document.querySelector(".label");
@@ -87,7 +91,7 @@ boutonParametre.forEach((b,index) => {
     else if (index === 1)
     {
         b.addEventListener("pointerdown", () => {
-        label_retour(MenuParametre) // Car pour le moment rien n'est configuré
+        loadingWindowButton(MenuParametre,MenuAudio) // Car pour le moment rien n'est configuré
             })
     }
 
@@ -116,6 +120,25 @@ boutonParametre.forEach((b,index) => {
     }
 })
 // --- Menu paramètre ------------------------------------------------------ Menu paramètre ---
+
+
+// --- Menu audio ------------------------------------------------------ Menu audio ---
+
+btnCurseurVolume.forEach((curseur, index) => {
+
+    // synchronise le curseur de la barre avec le pourcentage à droite
+    if (textVolume[index]) {
+        textVolume[index].textContent = `${curseur.value}%`;
+    }
+    
+    curseur.addEventListener("input", (e) => {
+        if (textVolume[index]) {
+            textVolume[index].textContent = `${e.target.value}%`;
+        }
+    });
+});
+
+// --- Menu audio ------------------------------------------------------ Menu audio ---
 
 
 // --- Menu langue ------------------------------------------------------ Menu langue ---
