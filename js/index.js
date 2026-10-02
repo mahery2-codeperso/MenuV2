@@ -182,7 +182,7 @@ boutonLangue.forEach((b,index) => {
     else if (index === 7)
     {
         b.addEventListener("pointerdown", () => {
-            loading_screen(MenuLangue);
+            label_retour(MenuLangue);
         })
     }
 })
