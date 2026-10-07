@@ -76,6 +76,7 @@ button {
     cursor: pointer;
     transition: all 0.235s ease;
     box-shadow: 0 0 10px #686767;
+    touch-action: manipulation;
 }
 
 .menu-menu {

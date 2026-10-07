@@ -30,7 +30,7 @@ let historique = [AffbtnMenu];
 
 // bouton retour ou quitter
 btnr.forEach(b => {
-    b.addEventListener("pointerdown", () => {
+    b.addEventListener("pointerup", () => {
         if (historique.length > 1) {
             historique.pop().classList.add("masque"); // on retire le menu actuel et on le masque
             historique[historique.length-1].classList.remove("masque");
@@ -39,7 +39,7 @@ btnr.forEach(b => {
 })
 
 // Ici c'est juste pour le bouton Menu
-boutonMenu.addEventListener("pointerdown", ()=> {
+boutonMenu.addEventListener("pointerup", ()=> {
     loadingWindowButton(AffbtnMenu, MenuPrincipal);
 })
 
@@ -50,7 +50,7 @@ boutonPrincipal.forEach((b,index) => {
     // Pour jouer
     if (index === 0)
     {
-        b.addEventListener("pointerdown", ()=> {
+        b.addEventListener("pointerup", ()=> {
             label_retour(MenuPrincipal); // Car pour le moment rien n'est configuré
             
         })
@@ -58,7 +58,7 @@ boutonPrincipal.forEach((b,index) => {
     // Pour aller dans les paramètres
     else if (index === 1)
     {
-        b.addEventListener("pointerdown", () =>{
+        b.addEventListener("pointerup", () =>{
             loadingWindowButton(MenuPrincipal, MenuParametre);
         })
     }
@@ -66,7 +66,7 @@ boutonPrincipal.forEach((b,index) => {
     // Pour quittter le menu
     else if (index === 2)
     {
-        b.addEventListener("pointerdown", ()=> {
+        b.addEventListener("pointerup", ()=> {
             loadingWindowButton(MenuPrincipal, AffbtnMenu);
             historique = [AffbtnMenu]; // vu qu'on revient à l'état initial alors on reset (et je le laisse pour etre sûr (soit une double vérif))
         })
@@ -82,7 +82,7 @@ boutonParametre.forEach((b,index) => {
     // Pour le bouton affichage
     if (index === 0)
     {
-        b.addEventListener("pointerdown", () => {
+        b.addEventListener("pointerup", () => {
         label_retour(MenuParametre) // Car pour le moment rien n'est configuré
             })
     }
@@ -90,7 +90,7 @@ boutonParametre.forEach((b,index) => {
     // Pour le bouton audio
     else if (index === 1)
     {
-        b.addEventListener("pointerdown", () => {
+        b.addEventListener("pointerup", () => {
         loadingWindowButton(MenuParametre,MenuAudio) // Car pour le moment rien n'est configuré
             })
     }
@@ -98,7 +98,7 @@ boutonParametre.forEach((b,index) => {
     // Pour le bouton configurations/Touches
     else if (index === 2)
     {
-        b.addEventListener("pointerdown", () => {
+        b.addEventListener("pointerup", () => {
         label_retour(MenuParametre) // Car pour le moment rien n'est configuré
             })
     }
@@ -106,7 +106,7 @@ boutonParametre.forEach((b,index) => {
     // Pour le bouton langue
     else if (index === 3)
     {
-        b.addEventListener("pointerdown", () => {
+        b.addEventListener("pointerup", () => {
         loadingWindowButton(MenuParametre,MenuLangue);
             })
     }
@@ -114,7 +114,7 @@ boutonParametre.forEach((b,index) => {
     // Pour le bouton Crédits
     else if (index === 4)
     {
-        b.addEventListener("pointerdown", () => {
+        b.addEventListener("pointerup", () => {
         loadingWindowButton(MenuParametre,credit);
             })
     }
@@ -148,7 +148,7 @@ boutonLangue.forEach((b,index) => {
     // Pour le premier bouton (chinese)
     if (index === 0)
     {
-        b.addEventListener("pointerdown", () => {
+        b.addEventListener("pointerup", () => {
             label_retour(MenuLangue);
         })
     }
@@ -156,7 +156,7 @@ boutonLangue.forEach((b,index) => {
     // Pour le premier bouton (deutsch)
     else if (index === 1)
     {
-        b.addEventListener("pointerdown", () => {
+        b.addEventListener("pointerup", () => {
             label_retour(MenuLangue);
         })
     }
@@ -164,7 +164,7 @@ boutonLangue.forEach((b,index) => {
     // Pour le premier bouton (english)
     else if (index === 2)
     {
-        b.addEventListener("pointerdown", () => {
+        b.addEventListener("pointerup", () => {
             label_retour(MenuLangue);
         })
     }
@@ -172,7 +172,7 @@ boutonLangue.forEach((b,index) => {
     // Pour le premier bouton (french)
     else if (index === 3)
     {
-        b.addEventListener("pointerdown", () => {
+        b.addEventListener("pointerup", () => {
             loading_screen(MenuLangue);
         })
     }
@@ -180,7 +180,7 @@ boutonLangue.forEach((b,index) => {
     // Pour le premier bouton (japanese)
     else if (index === 4)
     {
-        b.addEventListener("pointerdown", () => {
+        b.addEventListener("pointerup", () => {
             label_retour(MenuLangue);
         })
     }
@@ -188,7 +188,7 @@ boutonLangue.forEach((b,index) => {
     // Pour le premier bouton (korean)
     else if (index === 5)
     {
-        b.addEventListener("pointerdown", () => {
+        b.addEventListener("pointerup", () => {
             label_retour(MenuLangue);
         })
     }
@@ -196,7 +196,7 @@ boutonLangue.forEach((b,index) => {
     // Pour le premier bouton (malagasy)
     else if (index === 6)
     {
-        b.addEventListener("pointerdown", () => {
+        b.addEventListener("pointerup", () => {
             label_retour(MenuLangue);
         })
     }
@@ -204,7 +204,7 @@ boutonLangue.forEach((b,index) => {
     // Pour le premier bouton (spanish)
     else if (index === 7)
     {
-        b.addEventListener("pointerdown", () => {
+        b.addEventListener("pointerup", () => {
             label_retour(MenuLangue);
         })
     }
